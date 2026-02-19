@@ -1,0 +1,18 @@
+[
+    {
+      "name": "بورسلين خارجي",
+      "image": "/images/outdoor-porcelain.jpg",
+      "description": "بورسلين مقاوم للعوامل الجوية مثالي للمساحات الخارجية."
+    },
+    {
+      "name": "بورسلين داخلي",
+      "image": "/images/indoor-porcelain.jpg",
+      "description": "بورسلين عالي الجودة للديكور الداخلي للأرضيات والجدران."
+    },
+    {
+      "name": "سيراميك حمامات",
+      "image": "/images/bathroom-ceramic.jpg",
+      "description": "تصاميم رائعة ومقاومة للماء، مثالية للحمامات."
+    }
+  ]
+  

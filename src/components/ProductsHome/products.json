@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "بلاط رخامي",
+    "description": "تصميم فاخر مستوحى من الرخام الطبيعي بلمسة عصرية.",
+    "image": "/images/3.jpeg",
+    "tag": "Luxury"
+  },
+  {
+    "id": 2,
+    "name": "بلاط خشبي",
+    "description": "دفء الخشب الطبيعي مع متانة البورسلين.",
+    "image": "/public/images/2.webp",
+    "tag": "Premium"
+  },
+  {
+    "id": 3,
+    "name": "بلاط حجري",
+    "description": "قوة الحجر وأناقة التفاصيل للمساحات الواسعة.",
+    "image": "/public/images/1.avif",
+    "tag": "Exclusive"
+  },
+  {
+    "id": 4,
+    "name": "بلاط مزخرف",
+    "description": "نقوش فنية تضيف شخصية فريدة لأي مكان.",
+    "image": "/public/images/bathroom-ceramic.jpg",
+    "tag": "Artistic"
+  }
+]

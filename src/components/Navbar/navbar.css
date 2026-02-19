@@ -1,0 +1,449 @@
+:root{
+    --bg: #070a10;
+    --card: rgba(255,255,255,.06);
+    --card2: rgba(255,255,255,.08);
+    --stroke: rgba(255,255,255,.12);
+    --text: rgba(255,255,255,.88);
+    --muted: rgba(255,255,255,.62);
+    --gold1: #f7d27a;
+    --gold2: #b6862e;
+    --shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+  
+  /* wrapper fixed */
+  .luxNavWrap{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(180deg, rgba(7,10,16,.85), rgba(7,10,16,.35));
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  
+  .luxNav{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 12px;
+    direction: rtl;
+  }
+  
+  /* brand */
+  .luxBrand{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    user-select:none;
+  }
+  .luxMark{
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: rgba(247,210,122,.10);
+    border: 1px solid rgba(247,210,122,.18);
+    box-shadow: 0 12px 35px rgba(0,0,0,.22);
+    color: rgba(255,255,255,.95);
+  }
+  .luxBrandText{ display:flex; flex-direction:column; }
+  .luxBrandName{
+    font-weight: 900;
+    letter-spacing: .2px;
+    font-size: 16px;
+    background: linear-gradient(90deg, var(--gold1), var(--gold2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color: transparent;
+  }
+  .luxBrandTag{
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  
+  /* links */
+  .luxLinks{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.10);
+    box-shadow: 0 14px 35px rgba(0,0,0,.22);
+  }
+  
+  .luxLink{
+    position: relative;
+    color: rgba(255,255,255,.72);
+    text-decoration:none;
+    padding: 10px 12px;
+    border-radius: 999px;
+    transition: color .2s ease, background .2s ease, transform .2s ease;
+    overflow: hidden;
+  }
+  .luxLink:hover{
+    color: #fff;
+    background: rgba(255,255,255,.06);
+    transform: translateY(-1px);
+  }
+  
+  .luxLink.active{
+    color: #fff;
+    background: rgba(247,210,122,.10);
+    border: 1px solid rgba(247,210,122,.18);
+  }
+  
+  .luxUnderline{
+    position:absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 8px;
+    height: 2px;
+    border-radius: 999px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .25s ease;
+    background: linear-gradient(90deg, var(--gold1), var(--gold2));
+    opacity: .9;
+  }
+  .luxLink:hover .luxUnderline,
+  .luxLink.active .luxUnderline{
+    transform: scaleX(1);
+  }
+  .luxLinkText{
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* actions */
+  .luxActions{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  
+  .luxBtnOutline{
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.04);
+    color: rgba(255,255,255,.86);
+    border-radius: 16px;
+    padding: 10px 14px;
+    cursor:pointer;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .luxBtnOutline:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.06);
+    border-color: rgba(247,210,122,.18);
+  }
+  
+  .luxBtnGold{
+    position: relative;
+    border: 1px solid rgba(247,210,122,.30);
+    background: linear-gradient(90deg, rgba(247,210,122,.16), rgba(182,134,46,.12));
+    color: #fff;
+    border-radius: 16px;
+    padding: 10px 14px;
+    cursor:pointer;
+    box-shadow: var(--shadow);
+    overflow:hidden;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+  .luxBtnGold:hover{
+    transform: translateY(-1px);
+    border-color: rgba(247,210,122,.48);
+    background: linear-gradient(90deg, rgba(247,210,122,.22), rgba(182,134,46,.16));
+  }
+  .luxBtnGlow{
+    position:absolute;
+    inset:-60px -40px auto auto;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle at 30% 30%, rgba(247,210,122,.25), transparent 60%);
+    filter: blur(8px);
+    pointer-events:none;
+  }
+  
+  /* burger */
+  .luxBurger{
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.04);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    gap: 6px;
+    cursor:pointer;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+  }
+  .luxBurger:hover{
+    background: rgba(255,255,255,.06);
+    border-color: rgba(247,210,122,.18);
+    transform: translateY(-1px);
+  }
+  .luxBurger span{
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.85);
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .luxBurger.isOpen span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+  .luxBurger.isOpen span:nth-child(2){ opacity: 0; }
+  .luxBurger.isOpen span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+  
+  /* Drawer */
+  .luxDrawer{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+  }
+  .luxDrawer.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .luxDrawerBackdrop{
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,.55);
+  }
+  .luxDrawerPanel{
+    position:absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    margin: 0 auto;
+    max-width: 520px;
+    border-radius: 24px;
+    background: rgba(10,14,22,.92);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+    padding: 14px;
+    transform: translateY(-8px);
+    transition: transform .22s ease;
+    direction: rtl;
+  }
+  .luxDrawer.show .luxDrawerPanel{
+    transform: translateY(0);
+  }
+  .luxDrawerTop{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.10);
+  }
+  .luxDrawerBrand{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .luxDrawerTitle{
+    font-weight: 900;
+    background: linear-gradient(90deg, var(--gold1), var(--gold2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color: transparent;
+  }
+  .luxClose{
+    width: 40px;
+    height: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.04);
+    color: rgba(255,255,255,.9);
+    cursor:pointer;
+  }
+  .luxDrawerLinks{
+    display:flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 0;
+  }
+  .luxDrawerLink{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding: 12px 12px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.03);
+    color: rgba(255,255,255,.84);
+    text-decoration:none;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  }
+  .luxDrawerLink:hover{
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.06);
+    border-color: rgba(247,210,122,.18);
+  }
+  .luxDrawerLink.active{
+    background: rgba(247,210,122,.10);
+    border-color: rgba(247,210,122,.22);
+  }
+  .luxDrawerActions{
+    display:flex;
+    gap: 10px;
+    padding-top: 6px;
+    flex-wrap: wrap;
+  }
+  .full{ width: 100%; }
+  
+  .luxDrawerFoot{
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,.10);
+    color: rgba(255,255,255,.65);
+    font-size: 12px;
+    display:flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .luxMiniInfo{ opacity: .9; }
+  
+
+
+  /* ===== Products Dropdown (Desktop) ===== */
+.luxDrop {
+  position: relative;
+}
+
+.luxDropBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.luxCaret {
+  font-size: 12px;
+  opacity: 0.8;
+  transform: translateY(1px);
+}
+
+.luxMenu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 240px;
+  padding: 10px;
+  border-radius: 18px;
+  background: rgba(10, 14, 22, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  direction: rtl;
+  z-index: 50;
+}
+
+.luxMenu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.luxMenuItem {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.84);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  margin-bottom: 8px;
+}
+
+.luxMenuItem:last-child {
+  margin-bottom: 0;
+}
+
+.luxMenuItem:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.06);
+  border-color: rgba(247,210,122,.18);
+}
+
+.luxMenuItem.active {
+  background: rgba(247,210,122,.10);
+  border-color: rgba(247,210,122,.22);
+}
+
+/* ===== Products Accordion (Mobile Drawer) ===== */
+.luxAcc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.luxAccBtn {
+  width: 100%;
+}
+
+.luxAccCaret {
+  transition: transform .2s ease;
+  opacity: .85;
+}
+
+.luxAccCaret.rot {
+  transform: rotate(180deg);
+}
+
+.luxAccPanel {
+  display: grid;
+  gap: 8px;
+  padding: 0 6px;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .25s ease, opacity .2s ease;
+}
+
+.luxAccPanel.show {
+  max-height: 360px;
+  opacity: 1;
+}
+
+.luxAccItem {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: rgba(255,255,255,.84);
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.10);
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.luxAccItem:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.06);
+  border-color: rgba(247,210,122,.18);
+}
+
+  /* responsive */
+  @media (max-width: 900px){
+    .luxLinks{ display:none; }
+    .luxBurger{ display:flex; }
+  }
+  

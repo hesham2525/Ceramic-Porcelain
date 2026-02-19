@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "title": "فيلا حديثة",
+      "type": "سكني",
+      "location": "القاهرة الجديدة",
+      "year": "2025",
+      "image": "/images/projects/villa.jpg"
+    },
+    {
+      "id": 2,
+      "title": "مكتب راقي",
+      "type": "تجاري",
+      "location": "المعادي",
+      "year": "2024",
+      "image": "/images/projects/office.jpg"
+    },
+    {
+      "id": 3,
+      "title": "فندق فاخر",
+      "type": "فندقي",
+      "location": "الغردقة",
+      "year": "2025",
+      "image": "/images/projects/hotel.jpg"
+    },
+    {
+      "id": 4,
+      "title": "شقة مودرن",
+      "type": "سكني",
+      "location": "الشيخ زايد",
+      "year": "2024",
+      "image": "/images/projects/apartment.jpg"
+    },
+    {
+      "id": 5,
+      "title": "مطعم كلاسيك",
+      "type": "تجاري",
+      "location": "التجمع",
+      "year": "2025",
+      "image": "/images/projects/restaurant.jpg"
+    }
+  ]
+  
