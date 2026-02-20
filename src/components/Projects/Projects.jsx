@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from "react";
 import data from "./projects.json";
-import "./Projects.css";
-
+import "./projects.css";
 const FILTERS = ["الكل", "سكني", "تجاري", "فندقي"];
 
 export default function Projects() {
