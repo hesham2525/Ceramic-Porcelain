@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import ProductsShell from "./ProductsShell";
-import "./products.css";
+import "./products.css"
 
 export default function ProductsLayout() {
   return (
