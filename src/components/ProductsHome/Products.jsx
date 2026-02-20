@@ -1,5 +1,5 @@
 import productsData from "./products.json";
-import "./products.css";
+import "./productsHome.css";
 
 export default function Products() {
   return (
