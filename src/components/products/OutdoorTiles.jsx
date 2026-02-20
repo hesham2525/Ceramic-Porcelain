@@ -11,10 +11,10 @@ export default function OutdoorTiles() {
   // ===== Hero slider images =====
   const heroSlides = useMemo(
     () => [
-      { src: "/images/outdoor-1.jpg", alt: "بلاط أحواش - 1" },
-      { src: "/images/outdoor-2.jpg", alt: "بلاط أحواش - 2" },
-      { src: "/images/outdoor-3.jpg", alt: "بلاط أحواش - 3" },
-      { src: "/images/outdoor-4.jpg", alt: "بلاط أحواش - 4" },
+      { src: "/images/B1.jpeg", alt: "بلاط أحواش - 1" },
+      { src: "/images/B2.jpeg", alt: "بلاط أحواش - 2" },
+      { src: "/images/B3.jpeg", alt: "بلاط أحواش - 3" },
+      { src: "/images/B4.jpeg", alt: "بلاط أحواش - 4" },
     ],
     []
   );
@@ -30,7 +30,7 @@ export default function OutdoorTiles() {
         size: "مقاسات متعددة",
         finish: "خشن",
         usage: "أحواش/ممرات",
-        images: ["/images/outdoor-1.jpg", "/images/outdoor-2.jpg"],
+        images: ["/images/B1.jpeg", "/images/B2.jpeg"],
       },
       {
         id: "ot-002",
@@ -40,7 +40,7 @@ export default function OutdoorTiles() {
         size: "مقاسات متعددة",
         finish: "خشن",
         usage: "ممرات/ساحات",
-        images: ["/images/outdoor-3.jpg", "/images/outdoor-4.jpg"],
+        images: ["/images/B3.jpeg", "/images/B4.jpeg"],
       },
       {
         id: "ot-003",
@@ -50,7 +50,7 @@ export default function OutdoorTiles() {
         size: "حسب التصميم",
         finish: "خارجي",
         usage: "حدائق/جراجات",
-        images: ["/images/outdoor-2.jpg", "/images/outdoor-3.jpg"],
+        images: ["/images/B2.jpeg", "/images/B3.jpeg"],
       },
     ],
     []

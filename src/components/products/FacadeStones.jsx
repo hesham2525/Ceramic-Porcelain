@@ -11,10 +11,10 @@ export default function FacadeStones() {
   // ===== Hero slider images =====
   const heroSlides = useMemo(
     () => [
-      { src: "/images/stone-1.jpg", alt: "أحجار وجهات - 1" },
-      { src: "/images/stone-2.jpg", alt: "أحجار وجهات - 2" },
-      { src: "/images/stone-3.jpg", alt: "أحجار وجهات - 3" },
-      { src: "/images/stone-4.jpg", alt: "أحجار وجهات - 4" },
+      { src: "/images/W1.jpeg", alt: "أحجار وجهات - 1" },
+      { src: "/images/W2.jpeg", alt: "أحجار وجهات - 2" },
+      { src: "/images/W3.jpeg", alt: "أحجار وجهات - 3" },
+      { src: "/images/W4.jpeg", alt: "أحجار وجهات - 4" },
     ],
     []
   );
@@ -30,7 +30,7 @@ export default function FacadeStones() {
         size: "قص حسب الطلب",
         finish: "ناعم/خشن",
         usage: "واجهات",
-        images: ["/images/stone-1.jpg", "/images/stone-2.jpg"],
+        images: ["/images/W1.jpeg", "/images/W2.jpeg"],
       },
       {
         id: "fs-002",
@@ -40,7 +40,7 @@ export default function FacadeStones() {
         size: "ألواح/قطع",
         finish: "تصميمات متعددة",
         usage: "حوائط/مداخل",
-        images: ["/images/stone-3.jpg", "/images/stone-4.jpg"],
+        images: ["/images/W3.jpeg", "/images/W4.jpeg"],
       },
       {
         id: "fs-003",
@@ -50,7 +50,7 @@ export default function FacadeStones() {
         size: "حسب المقاس",
         finish: "قصات متنوعة",
         usage: "واجهات/ديكور",
-        images: ["/images/stone-2.jpg", "/images/stone-3.jpg"],
+        images: ["/images/W2.jpeg", "/images/W3.jpeg"],
       },
     ],
     []

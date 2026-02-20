@@ -23,7 +23,6 @@ export default function ArtificialMarbleSinks() {
     []
   );
 
-  // ===== Products (عدّلها حسب منتجاتك) =====
   const products = useMemo(
     () => [
       {
@@ -34,7 +33,7 @@ export default function ArtificialMarbleSinks() {
         size: "حسب المقاس",
         finish: "مط/لامع",
         usage: "مطابخ",
-        images: ["/images/M1.jpeg", "/images/M2.jpeg"],
+        images: ["/images/M2.jpeg", "/images/M3.jpeg", "/images/M4.jpeg"],
       },
       {
         id: "ams-002",
@@ -44,7 +43,12 @@ export default function ArtificialMarbleSinks() {
         size: "60×45",
         finish: "لامع",
         usage: "حمامات",
-        images: ["/images/M1.jpeg", "/images/M2.jpeg", "/images/M3.jpeg"],
+        images: [
+          "/images/M5.jpeg",
+          "/images/M6.jpeg",
+          "/images/M7.jpeg",
+          "/images/M9.jpeg",
+        ],
       },
       {
         id: "ams-003",
@@ -54,7 +58,7 @@ export default function ArtificialMarbleSinks() {
         size: "حسب المقاس",
         finish: "مط",
         usage: "مطابخ/حمامات",
-        images: ["/images/M1.jpeg", "/images/M2.jpeg"],
+        images: ["/images/M12.jpeg", "/images/M11.jpeg", "/images/M10.jpeg"],
       },
     ],
     []
@@ -68,7 +72,7 @@ export default function ArtificialMarbleSinks() {
     const id = setInterval(() => {
       if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1800); 
+    }, 1800);
     return () => clearInterval(id);
   }, [heroSlides.length]);
 
@@ -103,8 +107,8 @@ export default function ArtificialMarbleSinks() {
             <div className="luxHeroKicker">LUX TILES</div>
             <h1 className="luxHeroTitle">{PAGE_NAME}</h1>
             <p className="luxHeroDesc">
-              خامات عملية للمطابخ والحمامات • تفصيل حسب المقاس • ألوان ثابتة وخيارات
-              حواف. ابعت المقاسات على واتساب وخليك على طول في السليم.
+              خامات عملية للمطابخ والحمامات • تفصيل حسب المقاس • ألوان ثابتة
+              وخيارات حواف. ابعت المقاسات على واتساب وخليك على طول في السليم.
             </p>
 
             <div className="luxHeroStats">
@@ -147,7 +151,10 @@ export default function ArtificialMarbleSinks() {
           </div>
 
           {/* Slider */}
-          <div className="luxHeroSlider" aria-label="Artificial marble hero slider">
+          <div
+            className="luxHeroSlider"
+            aria-label="Artificial marble hero slider"
+          >
             <div className="luxSliderFrame">
               {heroSlides.map((s, i) => (
                 <img
@@ -179,7 +186,9 @@ export default function ArtificialMarbleSinks() {
                 className="luxArrow"
                 aria-label="Previous slide"
                 onClick={() =>
-                  setSlideIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length)
+                  setSlideIndex(
+                    (i) => (i - 1 + heroSlides.length) % heroSlides.length
+                  )
                 }
               >
                 ‹
@@ -188,7 +197,9 @@ export default function ArtificialMarbleSinks() {
                 type="button"
                 className="luxArrow"
                 aria-label="Next slide"
-                onClick={() => setSlideIndex((i) => (i + 1) % heroSlides.length)}
+                onClick={() =>
+                  setSlideIndex((i) => (i + 1) % heroSlides.length)
+                }
               >
                 ›
               </button>
@@ -266,7 +277,11 @@ export default function ArtificialMarbleSinks() {
                   <span>{active.usage}</span>
                 </div>
               </div>
-              <button className="luxModalClose" onClick={closeProduct} aria-label="Close">
+              <button
+                className="luxModalClose"
+                onClick={closeProduct}
+                aria-label="Close"
+              >
                 ✕
               </button>
             </div>

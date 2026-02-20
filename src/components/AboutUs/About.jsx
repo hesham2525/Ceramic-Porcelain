@@ -79,7 +79,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="luxCard">
+          <div className="formCard">
             <div className="luxCard__top">
               <div className="luxChip">ماذا يميزنا؟</div>
               <h3 className="luxCard__title">تفاصيل تُشبه الفن</h3>

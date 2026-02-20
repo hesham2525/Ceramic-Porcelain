@@ -2,6 +2,33 @@ import React from "react";
 import "./contact.css";
 
 export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const name = form.name.value;
+    const phone = form.phone.value;
+    const projectType = form.projectType.value;
+    const message = form.message.value;
+
+    const whatsappMessage = `
+  مرحبا، لدي استفسار جديد:
+  
+  👤 الاسم: ${name}
+  📞 الهاتف: ${phone}
+  🏗️ نوع المشروع: ${projectType}
+  
+  📝 التفاصيل:
+  ${message}
+    `;
+
+    const whatsappURL = `https://wa.me/201069514877?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <main className="contactPage">
       {/* HERO */}
@@ -53,7 +80,7 @@ export default function Contact() {
       <section className="contactSection" id="contact-info">
         <div className="contactSection__container grid2">
           {/* INFO CARD */}
-          <div className="luxCard">
+          <div className="formCard">
             <div className="luxCard__top">
               <div className="luxChip">بيانات التواصل</div>
               <h2 className="sectionTitle">نحن قريبون منك</h2>
@@ -98,7 +125,12 @@ export default function Contact() {
             </div>
 
             <div className="miniCTA">
-              <a className="btnGhost onDark" href="https://wa.me/200000000000" target="_blank" rel="noreferrer">
+              <a
+                className="btnGhost onDark"
+                href="https://wa.me/200000000000"
+                target="_blank"
+                rel="noreferrer"
+              >
                 واتساب مباشر
               </a>
               <a className="btnPrimary" href="/#products">
@@ -117,30 +149,37 @@ export default function Contact() {
               </p>
             </div>
 
-            <form className="contactForm" onSubmit={(e) => e.preventDefault()}>
+            <form className="contactForm" onSubmit={handleSubmit}>
               <div className="formGrid">
                 <label className="field">
                   <span className="label">الاسم</span>
-                  <input className="input" type="text" placeholder="اكتب اسمك" />
+                  <input
+                    className="input"
+                    type="text"
+                    name="name"
+                    placeholder="اكتب اسمك"
+                    required
+                  />
                 </label>
 
                 <label className="field">
                   <span className="label">رقم الهاتف</span>
-                  <input className="input" type="tel" placeholder="مثال: 01xxxxxxxxx" />
-                </label>
-
-                <label className="field">
-                  <span className="label">البريد الإلكتروني</span>
-                  <input className="input" type="email" placeholder="example@email.com" />
+                  <input
+                    className="input"
+                    type="tel"
+                    name="phone"
+                    placeholder="مثال: 01xxxxxxxxx"
+                    required
+                  />
                 </label>
 
                 <label className="field">
                   <span className="label">نوع المشروع</span>
-                  <select className="input">
-                    <option>سكني</option>
-                    <option>تجاري</option>
-                    <option>تشطيبات / تجديد</option>
-                    <option>أخرى</option>
+                  <select className="input" name="projectType" required>
+                    <option value="سكني">سكني</option>
+                    <option value="تجاري">تجاري</option>
+                    <option value="تشطيبات / تجديد">تشطيبات / تجديد</option>
+                    <option value="أخرى">أخرى</option>
                   </select>
                 </label>
 
@@ -148,20 +187,17 @@ export default function Contact() {
                   <span className="label">الرسالة</span>
                   <textarea
                     className="input textarea"
+                    name="message"
                     placeholder="اكتب تفاصيل المساحة، الإضاءة، الاستخدام، والميزانية إن أمكن…"
+                    required
                   />
                 </label>
               </div>
-
               <div className="formActions">
                 <button className="btnPrimary" type="submit">
                   ارسال الآن
                 </button>
-                <button className="btnGhost" type="button">
-                  طلب اتصال
-                </button>
               </div>
-
               <div className="formNote">
                 بالضغط على “ارسال الآن” أنت توافق على التواصل معك بخصوص طلبك.
               </div>

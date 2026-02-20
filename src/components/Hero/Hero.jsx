@@ -16,7 +16,7 @@ export default function Hero() {
         badge: "✦ تشطيبات راقية • خامات أصلية • فخامة تدوم",
         to: "/products/ceramic-porcelain",
         image:
-          "https://images.unsplash.com/photo-1582582494700-5d5c2a0c0b83?auto=format&fit=crop&w=1400&q=80",
+          "/public/images/indoor-porcelain.jpg",
         bullets: ["مقاوم للخدش", "ألوان ثابتة", "مقاسات متنوعة"],
       },
       {
@@ -27,7 +27,7 @@ export default function Hero() {
         badge: "✦ خامات طبيعية • قصات دقيقة • لمسة فندقية",
         to: "/products/natural-marble",
         image:
-          "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1400&q=80",
+          "/public/images/p22.jpg",
         bullets: ["مظهر طبيعي فاخر", "عروق فريدة", "تشطيب عالي"],
       },
       {
@@ -38,7 +38,7 @@ export default function Hero() {
         badge: "✦ مقاومة • عزل • أشكال مودرن",
         to: "/products/artificial-marble-sinks",
         image:
-          "https://images.unsplash.com/photo-1600566753051-f0d5a6d73d39?auto=format&fit=crop&w=1400&q=80",
+          "/public/images/4.jpg",
         bullets: ["مقاوم للبقع", "تنظيف سريع", "خيارات متعددة"],
       },
       {
