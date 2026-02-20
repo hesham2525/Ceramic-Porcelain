@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import "./Testimonials.css";
+import "./testimonials.css";
 
 const DATA = [
   {
