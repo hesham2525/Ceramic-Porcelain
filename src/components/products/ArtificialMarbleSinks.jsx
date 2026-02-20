@@ -44,8 +44,8 @@ export default function ArtificialMarbleSinks() {
       },
       {
         id: "ams-003",
-        title: "كونترتوب رخام صناعي - تفصيل",
-        badge: "كونترتوب",
+        title: "مطابخ رخام صناعي - تفصيل",
+        badge: "مطابخ ",
         price: "السعر عند الطلب",
         size: "حسب المقاس",
         finish: "مط",
@@ -64,7 +64,7 @@ export default function ArtificialMarbleSinks() {
     const id = setInterval(() => {
       if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1800); // زي ما تحب
+    }, 1800); 
     return () => clearInterval(id);
   }, [heroSlides.length]);
 

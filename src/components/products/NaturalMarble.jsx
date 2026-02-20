@@ -7,11 +7,15 @@ export default function NaturalMarble() {
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
   const heroSlides = useMemo(
     () => [
-      { src: "/images/p1.jpg", alt: "رخام طبيعي - 1" },
-      { src: "/images/p2.jpg", alt: "رخام طبيعي - 2" },
-      { src: "/images/p3.jpg", alt: "رخام طبيعي - 3" },
-      { src: "/images/p4.jpg", alt: "رخام طبيعي - 4" },
-      { src: "/images/p5.jpg", alt: "رخام طبيعي - 5" },
+      { src: "/images/R2.jpeg", alt: "رخام طبيعي - 2" },
+      { src: "/images/R1.jpeg", alt: "رخام طبيعي - 1" },
+      { src: "/images/R3.jpeg", alt: "رخام طبيعي - 3" },
+      { src: "/images/R4.jpeg", alt: "رخام طبيعي - 4" },
+      { src: "/images/R5.jpeg", alt: "رخام طبيعي - 5" },
+      { src: "/images/R6.jpeg", alt: "رخام طبيعي - 1" },
+      { src: "/images/R7.jpeg", alt: "رخام طبيعي - 2" },
+      { src: "/images/R9.jpeg", alt: "رخام طبيعي - 3" },
+      { src: "/images/R17.jpeg", alt: "رخام طبيعي - 4" },
     ],
     []
   );
@@ -27,7 +31,7 @@ export default function NaturalMarble() {
         size: "ألواح/بلاطات",
         finish: "تلميع / مط",
         usage: "أرضيات",
-        images: ["/images/p1.jpg", "/images/p2.jpg", "/images/p3.jpg"],
+        images: ["/images/R1.jpeg", "/images/R2.jpeg", "/images/R3.jpeg"],
       },
       {
         id: "nm-002",
@@ -37,7 +41,13 @@ export default function NaturalMarble() {
         size: "حسب المقاس",
         finish: "مضاد انزلاق",
         usage: "سلالم",
-        images: ["/images/p4.jpg", "/images/p2.jpg", "/images/p5.jpg"],
+        images: [
+          "/images/R6.jpeg",
+          "/images/R7.jpeg",
+          "/images/R8.jpeg",
+          "/images/R9.jpeg",
+          "/images/R10.jpeg",
+        ],
       },
       {
         id: "nm-003",
@@ -47,7 +57,12 @@ export default function NaturalMarble() {
         size: "ألواح/شرائح",
         finish: "تلميع",
         usage: "ديكور",
-        images: ["/images/p3.jpg", "/images/p1.jpg", "/images/p5.jpg"],
+        images: [
+          "/images/R14.jpeg",
+          "/images/R15.jpeg",
+          "/images/R12.jpeg",
+          "/images/R17.jpeg",
+        ],
       },
     ],
     []
