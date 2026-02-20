@@ -11,10 +11,14 @@ export default function ArtificialMarbleSinks() {
   // ===== Hero slider images =====
   const heroSlides = useMemo(
     () => [
-      { src: "/images/marble-1.jpg", alt: "رخام صناعي ومغاسل - 1" },
-      { src: "/images/marble-2.jpg", alt: "رخام صناعي ومغاسل - 2" },
-      { src: "/images/marble-3.jpg", alt: "رخام صناعي ومغاسل - 3" },
-      { src: "/images/marble-4.jpg", alt: "رخام صناعي ومغاسل - 4" },
+      { src: "/images/M1.jpeg", alt: "رخام صناعي ومغاسل - 1" },
+      { src: "/images/M9.jpeg", alt: "رخام صناعي ومغاسل - 3" },
+      { src: "/images/M10.jpeg", alt: "رخام صناعي ومغاسل - 4" },
+      { src: "/images/M7.jpeg", alt: "رخام صناعي ومغاسل - 2" },
+      { src: "/images/M11.jpeg", alt: "رخام صناعي ومغاسل - 4" },
+      { src: "/images/M2.jpeg", alt: "رخام صناعي ومغاسل - 2" },
+      { src: "/images/M3.jpeg", alt: "رخام صناعي ومغاسل - 3" },
+      { src: "/images/M5.jpeg", alt: "رخام صناعي ومغاسل - 4" },
     ],
     []
   );
@@ -30,7 +34,7 @@ export default function ArtificialMarbleSinks() {
         size: "حسب المقاس",
         finish: "مط/لامع",
         usage: "مطابخ",
-        images: ["/images/marble-1.jpg", "/images/marble-2.jpg"],
+        images: ["/images/M1.jpeg", "/images/M2.jpeg"],
       },
       {
         id: "ams-002",
@@ -40,7 +44,7 @@ export default function ArtificialMarbleSinks() {
         size: "60×45",
         finish: "لامع",
         usage: "حمامات",
-        images: ["/images/sink-1.jpg", "/images/sink-2.jpg", "/images/sink-3.jpg"],
+        images: ["/images/M1.jpeg", "/images/M2.jpeg", "/images/M3.jpeg"],
       },
       {
         id: "ams-003",
@@ -50,7 +54,7 @@ export default function ArtificialMarbleSinks() {
         size: "حسب المقاس",
         finish: "مط",
         usage: "مطابخ/حمامات",
-        images: ["/images/counter-1.jpg", "/images/counter-2.jpg"],
+        images: ["/images/M1.jpeg", "/images/M2.jpeg"],
       },
     ],
     []
