@@ -70,7 +70,6 @@ export default function Testimonials() {
 
         {/* Featured */}
         <div className="luxTesti__featured">
-          <div className="quoteMark">“</div>
 
           <div className="featuredTop">
             <div className="avatar" aria-hidden="true">

@@ -66,16 +66,13 @@ export default function ArtificialMarbleSinks() {
 
   // ===== Hero autoplay =====
   const [slideIndex, setSlideIndex] = useState(0);
-  const hoverPause = useRef(false);
 
   useEffect(() => {
     const id = setInterval(() => {
-      if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1800);
+    }, 1500);
     return () => clearInterval(id);
   }, [heroSlides.length]);
-
   const filtered = products;
 
   // ===== Modal =====
@@ -99,8 +96,7 @@ export default function ArtificialMarbleSinks() {
       {/* ===== HERO ===== */}
       <section
         className="luxProdHero"
-        onMouseEnter={() => (hoverPause.current = true)}
-        onMouseLeave={() => (hoverPause.current = false)}
+
       >
         <div className="luxHeroGrid">
           <div className="luxHeroCopy">

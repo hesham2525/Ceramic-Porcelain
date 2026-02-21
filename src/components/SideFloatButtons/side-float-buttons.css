@@ -184,6 +184,8 @@
   .sfPro{
     width: auto;
     gap: 10px;
+    top: auto !important;
+    bottom: 18px !important; /* عدّل الرقم براحتك */
   }
 
   .sfPro__brand{ display:none; }

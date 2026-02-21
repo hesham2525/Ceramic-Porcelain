@@ -106,16 +106,13 @@ export default function CeramicPorcelain() {
 
   // ===== Hero autoplay =====
   const [slideIndex, setSlideIndex] = useState(0);
-  const hoverPause = useRef(false);
 
   useEffect(() => {
     const id = setInterval(() => {
-      if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1000);
+    }, 1500);
     return () => clearInterval(id);
   }, [heroSlides.length]);
-
   const filtered = products;
 
   const [active, setActive] = useState(null); // product
@@ -136,11 +133,7 @@ export default function CeramicPorcelain() {
   return (
     <div className="luxProdPage">
       {/* ===== HERO ===== */}
-      <section
-        className="luxProdHero"
-        onMouseEnter={() => (hoverPause.current = true)}
-        onMouseLeave={() => (hoverPause.current = false)}
-      >
+      <section className="luxProdHero">
         <div className="luxHeroGrid">
           <div className="luxHeroCopy">
             <div className="luxHeroKicker">LUX TILES</div>

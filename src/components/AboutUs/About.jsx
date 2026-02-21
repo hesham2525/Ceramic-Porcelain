@@ -231,7 +231,7 @@ export default function About() {
             <a className="btnPrimary" href="/contact">
               احجز استشارة
             </a>
-            <a className="btnGhost onDark" href="/#projects">
+            <a className="btnGhost onDark" href="/products/ceramic-porcelain">
               شاهد مشاريعنا
             </a>
           </div>

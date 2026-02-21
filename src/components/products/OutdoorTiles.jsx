@@ -11,10 +11,14 @@ export default function OutdoorTiles() {
   // ===== Hero slider images =====
   const heroSlides = useMemo(
     () => [
-      { src: "/images/B1.jpeg", alt: "بلاط أحواش - 1" },
-      { src: "/images/B2.jpeg", alt: "بلاط أحواش - 2" },
-      { src: "/images/B3.jpeg", alt: "بلاط أحواش - 3" },
-      { src: "/images/B4.jpeg", alt: "بلاط أحواش - 4" },
+      { src: "/images/B3.jpeg", alt: "بلاط أحواش - 1" },
+      { src: "/images/B8.jpeg", alt: "بلاط أحواش - 2" },
+      { src: "/images/B9.jpeg", alt: "بلاط أحواش - 3" },
+      { src: "/images/B10.jpeg", alt: "بلاط أحواش - 4" },
+      { src: "/images/B13.jpeg", alt: "بلاط أحواش - 1" },
+      { src: "/images/B16.jpeg", alt: "بلاط أحواش - 2" },
+      { src: "/images/B18.jpeg", alt: "بلاط أحواش - 3" },
+      { src: "/images/B22.jpeg", alt: "بلاط أحواش - 4" },
     ],
     []
   );
@@ -30,7 +34,14 @@ export default function OutdoorTiles() {
         size: "مقاسات متعددة",
         finish: "خشن",
         usage: "أحواش/ممرات",
-        images: ["/images/B1.jpeg", "/images/B2.jpeg"],
+        images: [
+          "/images/B13.jpeg",
+          "/images/B4.jpeg",
+          "/images/B5.jpeg",
+          "/images/B7.jpeg",
+          "/images/B8.jpeg",
+          "/images/B9.jpeg",
+        ],
       },
       {
         id: "ot-002",
@@ -40,7 +51,13 @@ export default function OutdoorTiles() {
         size: "مقاسات متعددة",
         finish: "خشن",
         usage: "ممرات/ساحات",
-        images: ["/images/B3.jpeg", "/images/B4.jpeg"],
+        images: [
+          "/images/B14.jpeg",
+          "/images/B15.jpeg",
+          "/images/B16.jpeg",
+          "/images/B21.jpeg",
+          "/images/B22.jpeg",
+        ],
       },
       {
         id: "ot-003",
@@ -50,7 +67,13 @@ export default function OutdoorTiles() {
         size: "حسب التصميم",
         finish: "خارجي",
         usage: "حدائق/جراجات",
-        images: ["/images/B2.jpeg", "/images/B3.jpeg"],
+        images: [
+          "/images/B18.jpeg",
+          "/images/B17.jpeg",
+          "/images/B19.jpeg",
+          "/images/B20.jpeg",
+          "/images/B23.jpeg",
+        ],
       },
     ],
     []
@@ -58,13 +81,11 @@ export default function OutdoorTiles() {
 
   // ===== Hero autoplay =====
   const [slideIndex, setSlideIndex] = useState(0);
-  const hoverPause = useRef(false);
 
   useEffect(() => {
     const id = setInterval(() => {
-      if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1800);
+    }, 1500);
     return () => clearInterval(id);
   }, [heroSlides.length]);
 
@@ -89,11 +110,7 @@ export default function OutdoorTiles() {
   return (
     <div className="luxProdPage">
       {/* ===== HERO ===== */}
-      <section
-        className="luxProdHero"
-        onMouseEnter={() => (hoverPause.current = true)}
-        onMouseLeave={() => (hoverPause.current = false)}
-      >
+      <section className="luxProdHero">
         <div className="luxHeroGrid">
           <div className="luxHeroCopy">
             <div className="luxHeroKicker">LUX TILES</div>

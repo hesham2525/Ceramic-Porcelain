@@ -13,8 +13,15 @@ export default function FacadeStones() {
     () => [
       { src: "/images/W1.jpeg", alt: "أحجار وجهات - 1" },
       { src: "/images/W2.jpeg", alt: "أحجار وجهات - 2" },
-      { src: "/images/W3.jpeg", alt: "أحجار وجهات - 3" },
+      { src: "/images/W6.jpeg", alt: "أحجار وجهات - 3" },
       { src: "/images/W4.jpeg", alt: "أحجار وجهات - 4" },
+      { src: "/images/W10.jpeg", alt: "أحجار وجهات - 2" },
+      { src: "/images/W11.jpeg", alt: "أحجار وجهات - 3" },
+      { src: "/images/W12.jpeg", alt: "أحجار وجهات - 4" },
+      { src: "/images/W16.jpeg", alt: "أحجار وجهات - 2" },
+      { src: "/images/W17.jpeg", alt: "أحجار وجهات - 3" },
+      { src: "/images/W18.jpeg", alt: "أحجار وجهات - 4" },
+      { src: "/images/W19.jpeg", alt: "أحجار وجهات - 4" },
     ],
     []
   );
@@ -30,7 +37,7 @@ export default function FacadeStones() {
         size: "قص حسب الطلب",
         finish: "ناعم/خشن",
         usage: "واجهات",
-        images: ["/images/W1.jpeg", "/images/W2.jpeg"],
+        images: ["/images/W1.jpeg", "/images/W3.jpeg","/images/W15.jpeg", "/images/W5.jpeg","/images/W2.jpeg", "/images/W6.jpeg"],
       },
       {
         id: "fs-002",
@@ -40,7 +47,7 @@ export default function FacadeStones() {
         size: "ألواح/قطع",
         finish: "تصميمات متعددة",
         usage: "حوائط/مداخل",
-        images: ["/images/W3.jpeg", "/images/W4.jpeg"],
+        images: ["/images/W10.jpeg", "/images/W4.jpeg","/images/W11.jpeg", "/images/W12.jpeg","/images/W13.jpeg"],
       },
       {
         id: "fs-003",
@@ -50,7 +57,7 @@ export default function FacadeStones() {
         size: "حسب المقاس",
         finish: "قصات متنوعة",
         usage: "واجهات/ديكور",
-        images: ["/images/W2.jpeg", "/images/W3.jpeg"],
+        images: ["/images/W16.jpeg", "/images/W17.jpeg","/images/W18.jpeg", "/images/W19.jpeg"],
       },
     ],
     []
@@ -58,16 +65,13 @@ export default function FacadeStones() {
 
   // ===== Hero autoplay =====
   const [slideIndex, setSlideIndex] = useState(0);
-  const hoverPause = useRef(false);
 
   useEffect(() => {
     const id = setInterval(() => {
-      if (hoverPause.current) return;
       setSlideIndex((i) => (i + 1) % heroSlides.length);
-    }, 1800);
+    }, 1500);
     return () => clearInterval(id);
   }, [heroSlides.length]);
-
   const filtered = products;
 
   // ===== Modal =====
@@ -91,16 +95,16 @@ export default function FacadeStones() {
       {/* ===== HERO ===== */}
       <section
         className="luxProdHero"
-        onMouseEnter={() => (hoverPause.current = true)}
-        onMouseLeave={() => (hoverPause.current = false)}
+     
       >
         <div className="luxHeroGrid">
           <div className="luxHeroCopy">
             <div className="luxHeroKicker">LUX TILES</div>
             <h1 className="luxHeroTitle">{PAGE_NAME}</h1>
             <p className="luxHeroDesc">
-              قوة وتحمل • أشكال وتشطيبات متعددة • مناسب للواجهات والديكور الداخلي
-              والخارجي. ابعت صورة الواجهة/المقاسات على واتساب ونطلعلك أفضل اختيار.
+              قوة وتحمل • أشكال وتشطيبات متعددة • مناسب للواجهات والديكور
+              الداخلي والخارجي. ابعت صورة الواجهة/المقاسات على واتساب ونطلعلك
+              أفضل اختيار.
             </p>
 
             <div className="luxHeroStats">
@@ -175,7 +179,9 @@ export default function FacadeStones() {
                 className="luxArrow"
                 aria-label="Previous slide"
                 onClick={() =>
-                  setSlideIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length)
+                  setSlideIndex(
+                    (i) => (i - 1 + heroSlides.length) % heroSlides.length
+                  )
                 }
               >
                 ‹
@@ -184,7 +190,9 @@ export default function FacadeStones() {
                 type="button"
                 className="luxArrow"
                 aria-label="Next slide"
-                onClick={() => setSlideIndex((i) => (i + 1) % heroSlides.length)}
+                onClick={() =>
+                  setSlideIndex((i) => (i + 1) % heroSlides.length)
+                }
               >
                 ›
               </button>
@@ -262,7 +270,11 @@ export default function FacadeStones() {
                   <span>{active.usage}</span>
                 </div>
               </div>
-              <button className="luxModalClose" onClick={closeProduct} aria-label="Close">
+              <button
+                className="luxModalClose"
+                onClick={closeProduct}
+                aria-label="Close"
+              >
                 ✕
               </button>
             </div>
@@ -323,7 +335,8 @@ export default function FacadeStones() {
                   </div>
 
                   <div className="luxHint">
-                    * ابعت صورة المكان/واجهة المبنى + المقاسات على واتساب عشان نديك اقتراحات أدق.
+                    * ابعت صورة المكان/واجهة المبنى + المقاسات على واتساب عشان
+                    نديك اقتراحات أدق.
                   </div>
                 </div>
               </div>

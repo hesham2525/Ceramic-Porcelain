@@ -14,8 +14,8 @@ export default function Footer() {
         {/* Brand */}
         <div className="luxFooter__brand">
           <div className="luxFooter__logo">
-            <span className="luxFooter__logoMark">✦</span>
-            <span className="luxFooter__logoText">اسم الشركة</span>
+            <img className="luxFooter__logoMark" src="./images/logo.jpeg"/>
+            <span className="luxFooter__logoText"> الاثاث الثابت المميز </span>
           </div>
 
           <p className="luxFooter__desc">
@@ -101,7 +101,7 @@ export default function Footer() {
       {/* Bottom */}
       <div className="luxFooter__bottom">
         <div className="luxFooter__bottomInner">
-          <span>© {year} جميع الحقوق محفوظة | اسم الشركة</span>
+          <span>© {year} جميع الحقوق محفوظة | الاثاث الثابت المميز </span>
 
           <div className="luxFooter__legal">
             <a className="luxLink" href="#">سياسة الخصوصية</a>

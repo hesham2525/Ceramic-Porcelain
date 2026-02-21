@@ -5,7 +5,6 @@ import "./hero.css";
 export default function Hero() {
   const navigate = useNavigate();
 
-  // منتجات الهيرو (عدّل النص/الصور/المسارات براحتك)
   const heroProducts = useMemo(
     () => [
       {
@@ -15,8 +14,7 @@ export default function Hero() {
         desc: "جودة عالية وتصاميم عالمية تمنح منزلك هيبة فاخرة — من أول نظرة حتى آخر تفصيلة.",
         badge: "✦ تشطيبات راقية • خامات أصلية • فخامة تدوم",
         to: "/products/ceramic-porcelain",
-        image:
-          "/public/images/indoor-porcelain.jpg",
+        image: "/images/4.jpg",
         bullets: ["مقاوم للخدش", "ألوان ثابتة", "مقاسات متنوعة"],
       },
       {
@@ -26,8 +24,7 @@ export default function Hero() {
         desc: "عروق طبيعية ولمعة فاخرة تعيش سنوات — اختيار مثالي للصالات والمداخل.",
         badge: "✦ خامات طبيعية • قصات دقيقة • لمسة فندقية",
         to: "/products/natural-marble",
-        image:
-          "/public/images/p22.jpg",
+        image: "/images/p16.jpg",
         bullets: ["مظهر طبيعي فاخر", "عروق فريدة", "تشطيب عالي"],
       },
       {
@@ -37,8 +34,7 @@ export default function Hero() {
         desc: "عملية وسهلة التنظيف مع خيارات ألوان وأشكال تناسب كل المطابخ والحمامات.",
         badge: "✦ مقاومة • عزل • أشكال مودرن",
         to: "/products/artificial-marble-sinks",
-        image:
-          "/public/images/4.jpg",
+        image: "/images/M7.jpeg",
         bullets: ["مقاوم للبقع", "تنظيف سريع", "خيارات متعددة"],
       },
       {
@@ -48,8 +44,7 @@ export default function Hero() {
         desc: "لمسة خارجية قوية وأنيقة — تمنح المبنى شخصية وهيبة مع تحمل عالي.",
         badge: "✦ تحمل للعوامل الجوية • شكل راقي",
         to: "/products/facade-stones",
-        image:
-          "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1400&q=80",
+        image: "/images/W11.jpeg",
         bullets: ["مقاوم للحرارة", "مظهر قوي", "ألوان طبيعية"],
       },
       {
@@ -59,8 +54,7 @@ export default function Hero() {
         desc: "مناسب للممرات والحدائق — مانع انزلاق وتحمل ممتاز.",
         badge: "✦ مقاوم للانزلاق • مناسب للخارج",
         to: "/products/outdoor-tiles",
-        image:
-          "https://images.unsplash.com/photo-1528747008803-1c2d02b31076?auto=format&fit=crop&w=1400&q=80",
+        image: "/images/B11.jpeg",
         bullets: ["مانع للانزلاق", "تحمل عالي", "ملمس ثابت"],
       },
     ],
@@ -74,7 +68,7 @@ export default function Hero() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % heroProducts.length);
-    }, 4500); 
+    }, 4500);
     return () => clearInterval(id);
   }, [heroProducts.length]);
 

@@ -53,11 +53,10 @@ export default function Navbar() {
         <nav className="luxNav" aria-label="Main Navigation">
           {/* Brand */}
           <div className="luxBrand">
-            <div className="luxMark" aria-hidden="true">
-              ✦
-            </div>
+          <img className="luxFooter__logoMark" src="./images/logo.jpeg"/>
+
             <div className="luxBrandText">
-              <div className="luxBrandName">اسم الشركة</div>
+              <div className="luxBrandName">الاثاث الثابت المميز </div>
               <div className="luxBrandTag">سيراميك • بورسلين • فخامة</div>
             </div>
           </div>
@@ -131,8 +130,8 @@ export default function Navbar() {
         <div className="luxDrawerPanel">
           <div className="luxDrawerTop">
             <div className="luxDrawerBrand">
-              <span className="luxMark">✦</span>
-              <span className="luxDrawerTitle">اسم الشركة</span>
+            <img className="luxFooter__logoMark" src="./images/logo.jpeg"/>
+              <span className="luxDrawerTitle">الاثاث الثابت المميز </span>
             </div>
             <button className="luxClose" onClick={() => setOpen(false)} aria-label="Close">
               ✕

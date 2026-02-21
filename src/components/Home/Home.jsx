@@ -3,7 +3,7 @@ import Hero from "../Hero/Hero";
 import Categories from "../Categories/Categories";
 import Products from "../ProductsHome/Products";
 import Testimonials from "../Testimonials/Testimonials";
-import Projects from "../Projects/Projects";
+// import Projects from "../Projects/Projects";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <Categories />
       <Products />
       <Testimonials />
-      <Projects />
+      {/* <Projects /> */}
     </>
   );
 }
